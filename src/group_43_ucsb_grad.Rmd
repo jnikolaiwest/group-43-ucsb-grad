@@ -23,6 +23,11 @@ ggplot(data = ucsb_grad,
            color = Ethnicity)) +
   geom_col(position = "fill") +
     labs(x = "Year",
-      y = "Change in Domestic Graduate Enrollment")
+      y = "Change in Domestic Graduate Enrollment",
+      title = "Proportion of Graduate Student Enrollment by Ethnicity, 2008-2019",
+      caption = "Source: UCSB Office of Budget and Planning")+
+  theme(plot.title = element_text(size =12, hjust = -0.5))+
+  theme_minimal()
 ```
 
+**Ethnic Distributions of New Graduate Students, 2008-2019.** Data is from the UCSB Office of Budget and Planning Campus Profiles. Columns are proportions of total ethnic diversity, not absolute counts.
