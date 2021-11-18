@@ -2,7 +2,7 @@
 title: "Group 43 UCSB domestic grad enrollment"
 author: "Thomas Lenihan and Jessica West"
 date: "11/15/2021"
-output: html_document
+output: html_documecnt
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -14,3 +14,12 @@ library(here)
 ```{r}
 ucsb_grad <- read_csv(here ("data", "ucsb_grad_data.csv"))
 ```
+
+```{r}
+ggplot(data = ucsb_grad,
+       aes(x = year_abbr,
+           y = domestic_enrollment, 
+           color = ethnicity))+
+  geom_col()
+```
+
